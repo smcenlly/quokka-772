@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"target": "ES2020",
+		"module": "CommonJS",
+		"rootDir": "./",
+		"outDir": "./build",
+		"baseUrl": "./",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"paths": {
+			"@MyFunctions/*": ["./Modules/Common/Functions/*", "./Modules/Common/Functions/Index.ts"],
+			"@CommonTypes": ["./Modules/Common/GlobalTypes.ts"],
+			"@Classes/*": ["./Modules/Common/Classes/*"]
+		},
+		"typeRoots": ["./node_modules/@types", "./Modules/Common/CustomTypes/CustomTypes.Type.d.ts", "./TypeOverride.d.ts"],
+		"keyofStringsOnly": true,
+    "isolatedModules": false,
+		"noLib": false,
+		"noResolve": false,
+	},
+	"exclude": ["node_modules", "**/node_modules/*", "Templates/*"],
+	"ts-node": {
+		"files": true
+	}
+}
